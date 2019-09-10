@@ -1,10 +1,10 @@
-FROM node:8 as builder
+FROM node:latest as builder
 ADD . /app
 WORKDIR /app
 RUN npm install -g node-gyp
 RUN npm install --unsafe
 
-FROM node:8-alpine
+FROM node:latest
 
 ADD . /app
 WORKDIR /app
